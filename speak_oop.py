@@ -76,7 +76,7 @@ class Start:
             mixer.music.load(fr"music\{choice(listdir('music'))}")
             mode()
         except error:
-            print("Oooops, you get an error. Be proud! And.. try again :D")
+            print("Oooops, you get an error. Be proud! And.. try again")
         finally:
             self.query = self.listen_command()
 
