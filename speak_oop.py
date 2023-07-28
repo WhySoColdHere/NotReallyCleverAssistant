@@ -1,4 +1,4 @@
-from playsound import playsound
+from pygame import mixer, error
 from os import listdir
 from random import choice
 from codecs import open
@@ -22,16 +22,23 @@ class Start:
                 print(command())
             else:
                 counter += 1
-        if counter == 4:  # Если добавляешь новую функцию с заданием, то инкриментируй число
+        if counter == 6:  # Если добавляешь новую функцию с заданием, то инкриментируй число
             print("Your command is not recognizable")
 
     def commands_dict(self):
         self.commands_dict_init = {
             "commands": {
+                ### <ПРИВЕТСТВИЕ> ###
                 self.greeting: ["привет", "здравствуй", "включайся"],
+                ### <ЛИСТ С ЗАДАЧАМИ> ###
                 self.tasks: ["добавить задачу", "открыть записную книжку", "добавь задачу"],
+                ### <МУЗЫКА> ###
                 self.play_music: ["включи музло", "включи музыку"],
-                self.find_in_the_internet: ["найти", "поиск"]
+                self.stop_music: ["выключи музло", "выключи музыку"],
+                ### <ПОИСК В БРАУЗЕРЕ> ###
+                self.find_in_the_internet: ["найти", "поиск"],
+                ### ЗАКРЫТИЕ ПРОГРАММЫ ###
+                self.close_program: ["заканчивай", "прощай", "пока"]
             }
         }
         return self.commands_dict_init
@@ -63,14 +70,32 @@ class Start:
 
         wb.open(f"https://yandex.ru/search/?text={self.query}")
 
+    def music_mode(self, mode):
+        try:
+            mixer.init()
+            mixer.music.load(fr"music\{choice(listdir('music'))}")
+            mode()
+        except error:
+            print("Oooops, you get an error. Be proud! And.. try again :D")
+        finally:
+            self.query = self.listen_command()
+
     def play_music(self):
-        playsound(fr"music\{choice(listdir('music'))}")
-        self.query = self.listen_command()
+        self.music_mode(mixer.music.play)  # Не забывай убирать скобки
         return "Dancing guys, dancing!"
+
+    def stop_music(self):
+        self.music_mode(mixer.music.stop)
+        return "Music is stopped!"
 
     @staticmethod
     def greeting():
         return "Hello, master!"
+
+    @staticmethod
+    def close_program():
+        print("Good bye!")
+        exit()
 
     def start_program(self):
         while True:
