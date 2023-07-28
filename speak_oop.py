@@ -28,7 +28,7 @@ class Start:
     def commands_dict(self):
         self.commands_dict_init = {
             "commands": {
-                self.greeting: ["привет", "здравствуй", "включайся сука"],
+                self.greeting: ["привет", "здравствуй", "включайся"],
                 self.tasks: ["добавить задачу", "открыть записную книжку", "добавь задачу"],
                 self.play_music: ["включи музло", "включи музыку"],
                 self.find_in_the_internet: ["найти", "поиск"]
@@ -44,11 +44,11 @@ class Start:
                 self.query = self.sr.recognize_google(audio, language='ru-RU').lower()
                 return self.query
         except speech_recognition.UnknownValueError:
-            return "Something went wrong.. try again later little slut!"
+            return "Something went wrong.. try again later!"
 
     ##### Доп. функции #####
     def tasks(self):
-        print("Hello, what do u wanna add to todo list?")
+        print("Hello, what do you want to add to todo list?")
 
         self.query = self.listen_command()
 
@@ -70,7 +70,7 @@ class Start:
 
     @staticmethod
     def greeting():
-        return "Hello stutii peace of shit!"
+        return "Hello, master!"
 
     def start_program(self):
         while True:
