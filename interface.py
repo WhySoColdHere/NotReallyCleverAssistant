@@ -14,6 +14,7 @@ class MainWindow(QMainWindow):
     # Инициализатор кнопок
     def buttons_init(self):
         Button(self).btn_start_speak_func()
+        Button(self).btn_about_author_func()
 
 
 def application():

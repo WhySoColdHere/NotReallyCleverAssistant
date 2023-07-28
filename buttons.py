@@ -1,5 +1,6 @@
 from PyQt5 import QtWidgets
 from speak_oop import Start
+import webbrowser as wb
 
 
 class Button:
@@ -9,6 +10,7 @@ class Button:
 
         # Здесь происходит инициализация переменных для кнопок
         self._btn_start_speak = None
+        self._btn_about_author = None
 
     ##### BUTTON #####
     def btn_start_speak_func(self):
@@ -24,4 +26,13 @@ class Button:
         Start().start_program()
 
     ##### BUTTON #####
+    def btn_about_author_func(self):
+        self._btn_about_author = QtWidgets.QPushButton(self.q_main_window)
+        self._btn_about_author.move(205, 222)
+        self._btn_about_author.setFixedWidth(200)
+        self._btn_about_author.setText("Push me to check out my github!")
+        self._btn_about_author.clicked.connect(self._btn_about_author_func_clicked)
 
+    @staticmethod
+    def _btn_about_author_func_clicked():
+        wb.open("https://github.com/WhySoColdHere")
