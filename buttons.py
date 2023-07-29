@@ -1,5 +1,6 @@
 from PyQt5 import QtWidgets
 from speak_oop import Start, wb
+from threading import Thread
 
 
 class Button:
@@ -22,7 +23,7 @@ class Button:
     @staticmethod
     def _btn_start_speak_func_clicked():
         print("Speak..")
-        Start().start_program()
+        Thread(target=Start().start_program).start()
 
     ##### BUTTON #####
     def btn_about_author_func(self):

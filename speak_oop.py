@@ -8,10 +8,11 @@ import webbrowser as wb
 
 class Start:
     def __init__(self):
-        self.query = str
-        self.commands_dict_init = dict
         self.sr = speech_recognition.Recognizer()
         self.sr.pause_threshold = 1
+
+        self.query = ''
+        self.commands_dict_init = {}
 
     ##### Технические функции #####
     def main(self):
@@ -34,7 +35,7 @@ class Start:
                 self.tasks: ["добавить задачу", "открыть записную книжку", "добавь задачу"],
                 ### <МУЗЫКА> ###
                 self.play_music: ["включи музло", "включи музыку"],
-                self.stop_music: ["выключи музло", "выключи музыку"],
+                self.stop_music: ["выключи музло", "выключи музыку", "останови музыку"],
                 ### <ПОИСК В БРАУЗЕРЕ> ###
                 self.find_in_the_internet: ["найти", "поиск"],
                 ### ЗАКРЫТИЕ ПРОГРАММЫ ###
@@ -59,6 +60,7 @@ class Start:
 
         self.query = self.listen_command()
 
+        # open - не python функция, а codecs.open() - необходима для записи русских слов в файл
         with open("todo.txt", 'a', "utf-8") as file:
             file.write(f"{self.query}\n")
 
