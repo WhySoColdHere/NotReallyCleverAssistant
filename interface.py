@@ -1,6 +1,7 @@
 import sys
 from PyQt5.QtWidgets import QApplication, QMainWindow
 from buttons import Button
+from labels import Label
 
 
 class MainWindow(QMainWindow):
@@ -10,11 +11,16 @@ class MainWindow(QMainWindow):
         self.setGeometry(610, 400, 600, 600)
 
         self.buttons_init()
+        self.labels_init()
 
     # Инициализатор кнопок
     def buttons_init(self):
         Button(self).btn_start_speak_func()
         Button(self).btn_about_author_func()
+
+    # Инициализатор лэйблов
+    def labels_init(self):
+        Label(self).main_label_func()
 
 
 def application():

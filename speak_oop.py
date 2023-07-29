@@ -70,7 +70,7 @@ class Start:
 
         wb.open(f"https://yandex.ru/search/?text={self.query}")
 
-    def music_mode(self, mode):
+    def _music_mode(self, mode):
         try:
             mixer.init()
             mixer.music.load(fr"music\{choice(listdir('music'))}")
@@ -81,11 +81,11 @@ class Start:
             self.query = self.listen_command()
 
     def play_music(self):
-        self.music_mode(mixer.music.play)  # Не забывай убирать скобки
+        self._music_mode(mixer.music.play)  # Не забывай убирать скобки
         return "Dancing guys, dancing!"
 
     def stop_music(self):
-        self.music_mode(mixer.music.stop)
+        self._music_mode(mixer.music.stop)
         return "Music is stopped!"
 
     @staticmethod

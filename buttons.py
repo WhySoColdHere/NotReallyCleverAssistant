@@ -1,6 +1,5 @@
 from PyQt5 import QtWidgets
-from speak_oop import Start
-import webbrowser as wb
+from speak_oop import Start, wb
 
 
 class Button:
@@ -36,3 +35,5 @@ class Button:
     @staticmethod
     def _btn_about_author_func_clicked():
         wb.open("https://github.com/WhySoColdHere")
+
+
