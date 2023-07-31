@@ -17,7 +17,7 @@ class Button:
         self._btn_start_speak = QtWidgets.QPushButton(self.q_main_window)
         self._btn_start_speak.move(230, 250)
         self._btn_start_speak.setFixedWidth(150)
-        self._btn_start_speak.setText("Push me to speak")
+        self._btn_start_speak.setText("Speak")
         self._btn_start_speak.clicked.connect(self._btn_start_speak_func_clicked)  # Не забывай убирать скобки
 
     @staticmethod
@@ -37,4 +37,4 @@ class Button:
     def _btn_about_author_func_clicked():
         wb.open("https://github.com/WhySoColdHere")
 
-
+    ##### BUTTON #####

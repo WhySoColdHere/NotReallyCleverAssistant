@@ -11,20 +11,12 @@ class Start:
         self.sr = speech_recognition.Recognizer()
         self.sr.pause_threshold = 1
 
+        # Переменная, хранящая обработанный текст
         self.query = ''
+        # Переменная для хранения команд (Ее возвращает функция commands_dict и использует main)
         self.commands_dict_init = {}
 
     ##### Технические функции #####
-    def main(self):
-        self.query = self.listen_command()
-        counter = 0
-        for command, cur_command in self.commands_dict()["commands"].items():
-            if self.query in cur_command:
-                print(command())
-            else:
-                counter += 1
-        if counter == 6:  # Если добавляешь новую функцию с заданием, то инкриментируй число
-            print("Your command is not recognizable")
 
     def commands_dict(self):
         self.commands_dict_init = {
@@ -44,6 +36,17 @@ class Start:
         }
         return self.commands_dict_init
 
+    def main(self):
+        self.query = self.listen_command()
+        counter = 0
+        for command, cur_command in self.commands_dict()["commands"].items():
+            if self.query in cur_command:
+                print(command())
+            else:
+                counter += 1
+        if counter == 6:  # Если добавляешь новую функцию с заданием, то инкриментируй число
+            print("Your command is not recognizable")
+
     def listen_command(self):
         try:
             with speech_recognition.Microphone() as mic:
@@ -52,7 +55,13 @@ class Start:
                 self.query = self.sr.recognize_google(audio, language='ru-RU').lower()
                 return self.query
         except speech_recognition.UnknownValueError:
-            return "Something went wrong.. try again later!"
+            print(
+                """
+                The assistant went out to drink a coffee, try again!
+                Tap the 'speak' button and try to call her again!
+                """
+            )
+            exit()
 
     ##### Доп. функции #####
     def tasks(self):
@@ -72,6 +81,7 @@ class Start:
 
         wb.open(f"https://yandex.ru/search/?text={self.query}")
 
+    # Функция включает или выключает музыку, в зависимости от запроса.
     def _music_mode(self, mode):
         try:
             mixer.init()
