@@ -8,6 +8,7 @@ import webbrowser as wb
 
 class Start:
     def __init__(self):
+        super(Start, self).__init__()
         self.sr = speech_recognition.Recognizer()
         self.sr.pause_threshold = 1
 
@@ -80,6 +81,7 @@ class Start:
         self.query = self.listen_command()
 
         wb.open(f"https://yandex.ru/search/?text={self.query}")
+        return "This is what I found!"
 
     # Функция включает или выключает музыку, в зависимости от запроса.
     def _music_mode(self, mode):
