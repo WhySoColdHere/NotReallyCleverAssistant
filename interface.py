@@ -32,7 +32,7 @@ class MainWindow(QMainWindow):
     @staticmethod
     def _btn_start_speak_func_clicked():
         print("Speak..")
-        Thread(target=Start.start_program).start()
+        Thread(target=Start().start_program).start()
 
     ##### button #####
     def btn_about_author_func(self):
@@ -48,7 +48,6 @@ class MainWindow(QMainWindow):
 
     ##### LABELS #####
     ##### label #####
-
     def main_label_func(self):
         self.main_label = QLabel(self)
         self.main_label.setFont(QFont("Comic Sans MS", 20))
