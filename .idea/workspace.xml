@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="c1d0d538-4993-425d-94ab-fbe2a348a76f" name="Changes" comment="Commit_tenth">
+      <change afterPath="$PROJECT_DIR$/speech.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/buttons.py" beforeDir="false" afterPath="$PROJECT_DIR$/buttons.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/labels.py" beforeDir="false" afterPath="$PROJECT_DIR$/labels.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/speak_oop.py" beforeDir="false" afterPath="$PROJECT_DIR$/speaker.py" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="PUSH_AUTO_UPDATE" value="true" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="UPDATE_TYPE" value="REBASE" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="2TClJfPNFAUfdETQsukEgbarS8J" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_MARK_IGNORED_FILES_AS_EXCLUDED&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/lavrf/Desktop/all/ProgrammProj/PyCharmProj/PyQtProj&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;inlay.hints&quot;
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\lavrf\Desktop\all\ProgrammProj\PyCharmProj\CleverAssistent\copy_for_some_reason_fuck" />
+    </key>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="c1d0d538-4993-425d-94ab-fbe2a348a76f" name="Changes" comment="" />
+      <created>1690554872785</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1690554872785</updated>
+      <workItem from="1690554873894" duration="8515000" />
+      <workItem from="1690572804361" duration="5027000" />
+      <workItem from="1690577881003" duration="155000" />
+      <workItem from="1690578043508" duration="85000" />
+      <workItem from="1690578228447" duration="10058000" />
+      <workItem from="1690588715815" duration="344000" />
+      <workItem from="1690624774550" duration="6343000" />
+      <workItem from="1690812987591" duration="1377000" />
+      <workItem from="1690815818184" duration="8276000" />
+      <workItem from="1690831117724" duration="2678000" />
+      <workItem from="1690836322178" duration="4941000" />
+      <workItem from="1690885326126" duration="2631000" />
+    </task>
+    <task id="LOCAL-00001" summary="Commit_second">
+      <created>1690576758218</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1690576758218</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Commit_third">
+      <created>1690584294337</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1690584294337</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Commit_third">
+      <created>1690584376723</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1690584376723</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Commit_fifth">
+      <created>1690587959087</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1690587959087</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Commit_sixth">
+      <created>1690627665382</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1690627665382</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Commit_seventh">
+      <created>1690630154320</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1690630154320</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Commit_eight">
+      <created>1690832657699</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1690832657699</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Commit_tenth">
+      <created>1690840678643</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1690840678643</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Commit_tenth">
+      <created>1690841171911</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1690841171911</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Commit_second" />
+    <MESSAGE value="Commit_third" />
+    <MESSAGE value="Commit_fifth" />
+    <MESSAGE value="Commit_sixth" />
+    <MESSAGE value="Commit_seventh" />
+    <MESSAGE value="Commit_eight" />
+    <MESSAGE value="Commit_tenth" />
+    <option name="LAST_COMMIT_MESSAGE" value="Commit_tenth" />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/CleverAssistent$speak_without_oop_copy.coverage" NAME="speak_without_oop_copy Coverage Results" MODIFIED="1690561430353" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/copy_for_some_reason_fuck" />
+    <SUITE FILE_PATH="coverage/CleverAssistent$labels.coverage" NAME="labels Coverage Results" MODIFIED="1690836959854" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/CleverAssistent$speak_oop.coverage" NAME="speak_oop Coverage Results" MODIFIED="1690838793298" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/CleverAssistent$polygon_interface.coverage" NAME="polygon_interface Coverage Results" MODIFIED="1690833775236" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/CleverAssistent$speech.coverage" NAME="speech Coverage Results" MODIFIED="1690887144821" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/CleverAssistent$main2.coverage" NAME="main2 Coverage Results" MODIFIED="1690814145294" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/new_speech" />
+    <SUITE FILE_PATH="coverage/CleverAssistent$buttons.coverage" NAME="buttons Coverage Results" MODIFIED="1690587858148" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/CleverAssistent$speak_oop_interface.coverage" NAME="speak_oop_interface Coverage Results" MODIFIED="1690885708253" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/CleverAssistent$speak_oop_copy.coverage" NAME="speak_oop_copy Coverage Results" MODIFIED="1690562037242" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/copy_for_some_reason_fuck" />
+    <SUITE FILE_PATH="coverage/CleverAssistent$current_oop.coverage" NAME="current_oop Coverage Results" MODIFIED="1690559354797" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/CleverAssistent$main.coverage" NAME="main Coverage Results" MODIFIED="1690814110317" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/new_speech" />
+    <SUITE FILE_PATH="coverage/CleverAssistent$current.coverage" NAME="current Coverage Results" MODIFIED="1690558044538" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/CleverAssistent$temp.coverage" NAME="temp Coverage Results" MODIFIED="1690583971967" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/CleverAssistent$interface.coverage" NAME="interface Coverage Results" MODIFIED="1690887545054" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+  </component>
+</project>
