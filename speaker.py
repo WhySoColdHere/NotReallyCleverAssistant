@@ -4,11 +4,11 @@ from random import choice
 from codecs import open
 import speech_recognition
 import webbrowser as wb
+from speech import speech_text
 
 
 class Start:
     def __init__(self):
-        super(Start, self).__init__()
         self.sr = speech_recognition.Recognizer()
         self.sr.pause_threshold = 1
 
@@ -46,7 +46,7 @@ class Start:
             else:
                 counter += 1
         if counter == 6:  # Если добавляешь новую функцию с заданием, то инкриментируй число
-            print("Your command is not recognizable")
+            speech_text("Your command is not recognizable")
 
     def listen_command(self):
         try:
@@ -56,17 +56,11 @@ class Start:
                 self.query = self.sr.recognize_google(audio, language='ru-RU').lower()
                 return self.query
         except speech_recognition.UnknownValueError:
-            print(
-                """
-                The assistant went out to drink a coffee, try again!
-                Tap the 'speak' button and try to call her again!
-                """
-            )
-            exit()
+            return True
 
     ##### Доп. функции #####
     def tasks(self):
-        print("Hello, what do you want to add to todo list?")
+        speech_text("Hello, what do you want to add to todo list?")
 
         self.query = self.listen_command()
 
@@ -74,14 +68,15 @@ class Start:
         with open("todo.txt", 'a', "utf-8") as file:
             file.write(f"{self.query}\n")
 
-        return f"Task '{self.query}' has added in your todo list"
+        speech_text(f"Your task has added in your todo list")
+        return ''
 
     def find_in_the_internet(self):
-        print("Hello, what you want to search?")
+        speech_text("Hello, what you want to search?")
         self.query = self.listen_command()
 
         wb.open(f"https://yandex.ru/search/?text={self.query}")
-        return "This is what I found!"
+        return ''
 
     # Функция включает или выключает музыку, в зависимости от запроса.
     def _music_mode(self, mode):
@@ -90,25 +85,29 @@ class Start:
             mixer.music.load(fr"music\{choice(listdir('music'))}")
             mode()
         except error:
-            print("Oooops, you get an error. Be proud! And.. try again")
+            speech_text("Ops, you get an error. Be proud! And.. try again")
         finally:
             self.query = self.listen_command()
 
     def play_music(self):
+        speech_text("Dancing guys, dancing!")
         self._music_mode(mixer.music.play)  # Не забывай убирать скобки
-        return "Dancing guys, dancing!"
+        return ''
 
     def stop_music(self):
         self._music_mode(mixer.music.stop)
-        return "Music is stopped!"
+        speech_text("Music is stopped!")
+        return ''
 
     @staticmethod
     def greeting():
-        return "Hello, master!"
+        speech_text("Hello")
+        return ''
 
     @staticmethod
     def close_program():
-        print("Good bye!")
+        speech_text("Good bye!")
+        print("End")
         exit()
 
     def start_program(self):
