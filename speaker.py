@@ -1,16 +1,13 @@
-from pygame import mixer, error
-from os import listdir
-from random import choice
 from codecs import open
 import speech_recognition
 import webbrowser as wb
-from speech import speech_text
+from speech import Speech
 
 
 class Start:
     def __init__(self):
         self.sr = speech_recognition.Recognizer()
-        self.sr.pause_threshold = 1
+        self.sr.pause_threshold = 1  # Максимальная пауза между словами
 
         # Переменная, хранящая обработанный текст
         self.query = ''
@@ -26,9 +23,6 @@ class Start:
                 self.greeting: ["привет", "здравствуй", "включайся"],
                 ### <ЛИСТ С ЗАДАЧАМИ> ###
                 self.tasks: ["добавить задачу", "открыть записную книжку", "добавь задачу"],
-                ### <МУЗЫКА> ###
-                self.play_music: ["включи музло", "включи музыку"],
-                self.stop_music: ["выключи музло", "выключи музыку", "останови музыку"],
                 ### <ПОИСК В БРАУЗЕРЕ> ###
                 self.find_in_the_internet: ["найти", "поиск"],
                 ### ЗАКРЫТИЕ ПРОГРАММЫ ###
@@ -46,70 +40,51 @@ class Start:
             else:
                 counter += 1
         if counter == 6:  # Если добавляешь новую функцию с заданием, то инкриментируй число
-            speech_text("Your command is not recognizable")
+            Speech("Your command is not recognizable").speech_text_process()
 
     def listen_command(self):
         try:
             with speech_recognition.Microphone() as mic:
-                self.sr.adjust_for_ambient_noise(mic, 0.5)
+                self.sr.adjust_for_ambient_noise(mic, 0.5)  # Регулировка шума
                 audio = self.sr.listen(mic)
                 self.query = self.sr.recognize_google(audio, language='ru-RU').lower()
                 return self.query
         except speech_recognition.UnknownValueError:
-            return True
+            Speech("Something goes wrong. Tap speak to continue").speech_text_process()
+            print(self.query)
+            exit()
 
     ##### Доп. функции #####
     def tasks(self):
-        speech_text("Hello, what do you want to add to todo list?")
-
+        Speech("What do you want to add to todo list?").speech_text_process()
         self.query = self.listen_command()
 
         # open - не python функция, а codecs.open() - необходима для записи русских слов в файл
         with open("todo.txt", 'a', "utf-8") as file:
             file.write(f"{self.query}\n")
 
-        speech_text(f"Your task has added in your todo list")
-        return ''
+        Speech("Your task has added in your todo list").speech_text_process()
+        return 'tasks'
 
     def find_in_the_internet(self):
-        speech_text("Hello, what you want to search?")
+        Speech("What you want to search?").speech_text_process()
         self.query = self.listen_command()
 
         wb.open(f"https://yandex.ru/search/?text={self.query}")
-        return ''
-
-    # Функция включает или выключает музыку, в зависимости от запроса.
-    def _music_mode(self, mode):
-        try:
-            mixer.init()
-            mixer.music.load(fr"music\{choice(listdir('music'))}")
-            mode()
-        except error:
-            speech_text("Ops, you get an error. Be proud! And.. try again")
-        finally:
-            self.query = self.listen_command()
-
-    def play_music(self):
-        speech_text("Dancing guys, dancing!")
-        self._music_mode(mixer.music.play)  # Не забывай убирать скобки
-        return ''
-
-    def stop_music(self):
-        self._music_mode(mixer.music.stop)
-        speech_text("Music is stopped!")
-        return ''
+        return 'find_in_the_internet'
 
     @staticmethod
     def greeting():
-        speech_text("Hello")
+        Speech("Hello").speech_text_process()
         return ''
 
     @staticmethod
     def close_program():
-        speech_text("Good bye!")
+        Speech("Good bye!").speech_text_process()
         print("End")
         exit()
 
     def start_program(self):
         while True:
             self.main()
+
